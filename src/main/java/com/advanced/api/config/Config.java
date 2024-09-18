@@ -39,7 +39,7 @@ public class Config {
 
     public static String getBaseUrl() {
         if (useWireMock) {
-            return "http://localhost:8989";
+            return "http://localhost:8990";
         }
         return properties.getProperty("base.url");
     }

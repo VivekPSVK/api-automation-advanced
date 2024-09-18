@@ -1,6 +1,6 @@
 {
   "mocks": {
-    "userApi": "http://localhost:8989/api/users/2",
-    "resourceApi": "http://localhost:8989/api/unknown/2"
+    "userApi": "http://localhost:8990/api/users/2",
+    "resourceApi": "http://localhost:8990/api/unknown/2"
   }
 }

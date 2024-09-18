@@ -20,10 +20,10 @@ public class BaseTest {
     public void setup() {
         if (Config.isUseWireMock()) {
             logger.info("Starting WireMock server on port 8989...");
-            wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(8989));
+            wireMockServer = new WireMockServer(WireMockConfiguration.wireMockConfig().port(8990));
             try {
                 wireMockServer.start();
-                WireMock.configureFor("localhost", 8989);
+                WireMock.configureFor("localhost", 8990);
                 MockSetup.setupUserMocks();
                 MockSetup.setupMockApi();
                 logger.info("WireMock server started and mocks are set up.");
