@@ -14,6 +14,14 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        // Additional stages can go here
+    }
+    post {
+        always {
+            // Archive test results
+            archiveArtifacts artifacts: 'target/surefire-reports/*.xml', allowEmptyArchive: true
+
+            // Publish JUnit test results
+            junit 'target/surefire-reports/*.xml'
+        }
     }
 }
